@@ -471,7 +471,7 @@ filterDateObj.setDate(filterDateObj.getDate() + 1);
     console.log("api to count to call campaign = ",fetchedcampaignCount)
     fetchedcampaignCount = fetchedcampaignCount+1
     // Fetch active campaigns from the local server
-    let activeCampaignsResponse = await fetch('https://counsellorlead-3.onrender.com/getfacebookCampaignData');
+    let activeCampaignsResponse = await fetch('https://counsellorlead-5.onrender.com/getfacebookCampaignData');
     let activeCampaigns = await activeCampaignsResponse.json();
     activeCampaigns = activeCampaigns.data
     console.log("Active campaigns fetched:", activeCampaigns.length);
@@ -1673,7 +1673,7 @@ router.get('/getcounselorLeadFilter',async(req,res)=>{
         }
     })
 
-    let totalDemo = await counselorDemo.findOne({counselorNo:counselorNo,
+    let totalDemo = await counselorDemo.find({counselorNo:counselorNo,
         date:{
             $gte:startDate,
             $lte:endDate,
@@ -1746,7 +1746,7 @@ router.get('/getLeadFilter',async(req,res)=>{
     })
 
 
-    let totalDemo = await counselorDemo.findOne({counselorNo:counselorNo,
+    let totalDemo = await counselorDemo.find({counselorNo:counselorNo,
         date:{
             $gte:startDate,
             $lte:endDate,

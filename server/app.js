@@ -12,7 +12,7 @@ dbConnect()
 const corsOptions = {
     origin: '*', // or use '*' to allow all origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: '*'
+    allowedHeaders: '*',
 };
 
 app.use(cors(corsOptions));
