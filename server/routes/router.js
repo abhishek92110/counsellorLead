@@ -1673,7 +1673,7 @@ router.get('/getcounselorLeadFilter',async(req,res)=>{
         }
     })
 
-    let totalDemo = await counselorDemo.findOne({counselorNo:counselorNo,
+    let totalDemo = await counselorDemo.find({counselorNo:counselorNo,
         date:{
             $gte:startDate,
             $lte:endDate,
@@ -1746,7 +1746,7 @@ router.get('/getLeadFilter',async(req,res)=>{
     })
 
 
-    let totalDemo = await counselorDemo.findOne({counselorNo:counselorNo,
+    let totalDemo = await counselorDemo.find({counselorNo:counselorNo,
         date:{
             $gte:startDate,
             $lte:endDate,
