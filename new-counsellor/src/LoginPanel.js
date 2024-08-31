@@ -45,7 +45,7 @@ import { Link } from "react-router-dom";
     let body = user=="admin"?JSON.stringify({ email: login.counselorNo, password: login.password }):JSON.stringify({ counselorNo: login.counselorNo, password: login.password })
 
     try{
-    let data = await fetch(`https://counsellorlead-2.onrender.com/${user}`, {
+    let data = await fetch(`http://localhost:8000/${user}`, {
 
       method: "POST",
       headers: {

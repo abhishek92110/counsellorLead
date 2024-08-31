@@ -77,7 +77,7 @@ const AllLead = () => {
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadFilter', {
+      let totalLead = await fetch('http://localhost:8000/getcounselorLeadFilter', {
         method: 'GET',
         headers: {
           'counselorNo': counsellor.counsellorNo,
@@ -146,7 +146,7 @@ const AllLead = () => {
 
         ContextValue.updateProgress(60);
   
-        const res = await fetch('https://counsellorlead-2.onrender.com/counselorLead', {
+        const res = await fetch('http://localhost:8000/counselorLead', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

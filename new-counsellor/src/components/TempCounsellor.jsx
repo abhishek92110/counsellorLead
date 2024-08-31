@@ -162,7 +162,7 @@ const CounsellorAllLead = () => {
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getLeadFilter', {
+      let totalLead = await fetch('http://localhost:8000/getLeadFilter', {
         method: 'GET',
         headers: {
           'counselorNo': localStorage.getItem("counsellorNo"),
@@ -299,7 +299,7 @@ const CounsellorAllLead = () => {
 
     try {
 
-      let url = `https://counsellorlead-2.onrender.com/counselorLead`
+      let url = `http://localhost:8000/counselorLead`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -375,7 +375,7 @@ const addLeadStatus = async (e) => {
 
   try 
   {
-    let url = `https://counsellorlead-2.onrender.com/counselorLead`
+    let url = `http://localhost:8000/counselorLead`
     ContextValue.updateProgress(60);
 
     const res = await fetch(`${url}`, {
@@ -395,7 +395,7 @@ const addLeadStatus = async (e) => {
 
       try {
 
-        let url = `https://counsellorlead-2.onrender.com/counselorDemo`
+        let url = `http://localhost:8000/counselorDemo`
         ContextValue.updateProgress(60);
   
         const res = await fetch(`${url}`, {
@@ -414,7 +414,7 @@ const addLeadStatus = async (e) => {
         if(data.status && (visitData.length>0 || followUpData>0)){
           try {
   
-            let url = `https://counsellorlead-2.onrender.com/counselorVisit`
+            let url = `http://localhost:8000/counselorVisit`
             ContextValue.updateProgress(60);
       
             const res = await fetch(`${url}`, {
@@ -435,7 +435,7 @@ const addLeadStatus = async (e) => {
             if(data.status && followUpData.length>0){
               try {
   
-                let url = `https://counsellorlead-2.onrender.com/counselorFollowUp`
+                let url = `http://localhost:8000/counselorFollowUp`
                 ContextValue.updateProgress(60);
           
                 const res = await fetch(`${url}`, {
@@ -604,7 +604,7 @@ const getLead = async()=>{
 
   try
   {
-    let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadCount',{
+    let totalLead = await fetch('http://localhost:8000/getcounselorLeadCount',{
       method:'GET',
       headers:{
         "counselorNo":localStorage.getItem("counsellorNo"),

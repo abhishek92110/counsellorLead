@@ -465,7 +465,7 @@ router.get('/getLatestFacebookAdData', async (req, res) => {
 filterDateObj.setDate(filterDateObj.getDate() + 1);
 
 // Convert the incremented date back to a string in 'YYYY-MM-DD' format
-let nextDayFilterDate = filterDateObj.toISOString().split('T')[0]; 
+    let nextDayFilterDate = filterDateObj.toISOString().split('T')[0]; 
     let fetchedcampaignCount = 1;
 
     console.log("api to count to call campaign = ",fetchedcampaignCount)
