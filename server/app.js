@@ -9,7 +9,13 @@ const bodyParser = require('body-parser');
 
 dbConnect()
 
+const corsOptions = {
+    origin: '*', // or use '*' to allow all origins
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
 
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
@@ -18,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 
 app.get("/",(req,res)=>{

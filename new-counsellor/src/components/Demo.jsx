@@ -70,7 +70,7 @@ getAllCounsellor()
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('http://localhost:8000/getcounselorDemoFilter', {
+      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorDemoFilter', {
         method: 'GET',
         headers: {
           'counselorNo': counsellor.counsellorNo,

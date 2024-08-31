@@ -120,7 +120,7 @@ return (`${year}-${month}-${day}`)
     // console.log("counsellor no from getLead =",localStorage.getItem("counsellorNo"),rangeDate.startDate,rangeDate.endDate)
 
     try{
-      let totalLead = await fetch('http://localhost:8000/getcounselorFollowUpCount',{
+      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorFollowUpCount',{
         method:'GET',
         headers:{
           "counselorNo":localStorage.getItem("counsellorNo"),
@@ -133,7 +133,7 @@ return (`${year}-${month}-${day}`)
 
       totalLead = await totalLead.json();
 
-      let totalReFollowUp = await fetch('http://localhost:8000/getcounselorReFollowUp',{
+      let totalReFollowUp = await fetch('https://counsellorlead-1.onrender.com/getcounselorReFollowUp',{
         method:'GET',
         headers:{
           "counselorNo":localStorage.getItem("counsellorNo"),
@@ -234,7 +234,7 @@ return (`${year}-${month}-${day}`)
 
     try {
 
-      let url = `http://localhost:8000/counselorFollowUp`
+      let url = `https://counsellorlead-1.onrender.com/counselorFollowUp`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -286,7 +286,7 @@ return (`${year}-${month}-${day}`)
 
     try {
 
-      let url = `http://localhost:8000/counselorFollowUp`
+      let url = `https://counsellorlead-1.onrender.com/counselorFollowUp`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -333,7 +333,7 @@ return (`${year}-${month}-${day}`)
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('http://localhost:8000/getcounselorFollowUpCount', {
+      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorFollowUpCount', {
         method: 'GET',
         headers: {
           'counselorNo': localStorage.getItem("counsellorNo"),

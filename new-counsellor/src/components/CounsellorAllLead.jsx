@@ -362,7 +362,7 @@ const CounsellorAllLead = () => {
    console.log("temp latest data =",latestData)
     try {
 
-      let url = `http://localhost:8000/counselorLead`
+      let url = `https://counsellorlead-1.onrender.com/counselorLead`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -426,7 +426,7 @@ const addLeadStatus = async (e) => {
 
   try 
   {
-    let url = `http://localhost:8000/counselorLead`
+    let url = `https://counsellorlead-1.onrender.com/counselorLead`
     ContextValue.updateProgress(20);
 
     const res = await fetch(`${url}`, {
@@ -466,7 +466,7 @@ const addLeadStatus = async (e) => {
       console.log("demo data length =",demoData)
       try {
 
-        let url = `http://localhost:8000/counselorDemo`
+        let url = `https://counsellorlead-1.onrender.com/counselorDemo`
         ContextValue.updateProgress(60);
   
         const res = await fetch(`${url}`, {
@@ -505,7 +505,7 @@ const addLeadStatus = async (e) => {
           console.log("if from visit and followup length",visitData)
           try {
   
-            let url = `http://localhost:8000/counselorVisit`
+            let url = `https://counsellorlead-1.onrender.com/counselorVisit`
             ContextValue.updateProgress(60);
       
             const res = await fetch(`${url}`, {
@@ -546,7 +546,7 @@ const addLeadStatus = async (e) => {
               console.log("follow up data length", followUpData.length)
               try {
   
-                let url = `http://localhost:8000/counselorFollowUp`
+                let url = `https://counsellorlead-1.onrender.com/counselorFollowUp`
                 ContextValue.updateProgress(60);
           
                 const res = await fetch(`${url}`, {
@@ -613,7 +613,7 @@ const getLead = async()=>{
 
   try
   {
-    let totalLead = await fetch('http://localhost:8000/getcounselorLeadFilter',{
+    let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadFilter',{
       method:'GET',
       headers:{
         "counselorNo":localStorage.getItem("counsellorNo"),
