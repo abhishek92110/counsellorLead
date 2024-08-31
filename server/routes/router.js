@@ -36,7 +36,6 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const fs = require("fs");
 const path = require('path');
-const baseUrl = "http://localhost:8000/files/";
 const admins = require("../models/Admin")
 const attendance = require("../models/Attendance")
 const Studentattendance = require("../models/StudentAttendance")
@@ -472,7 +471,7 @@ let nextDayFilterDate = filterDateObj.toISOString().split('T')[0];
     console.log("api to count to call campaign = ",fetchedcampaignCount)
     fetchedcampaignCount = fetchedcampaignCount+1
     // Fetch active campaigns from the local server
-    let activeCampaignsResponse = await fetch('https://counsellorlead-1.onrender.com/getfacebookCampaignData');
+    let activeCampaignsResponse = await fetch('https://counsellorlead-2.onrender.com/getfacebookCampaignData');
     let activeCampaigns = await activeCampaignsResponse.json();
     activeCampaigns = activeCampaigns.data
     console.log("Active campaigns fetched:", activeCampaigns.length);
