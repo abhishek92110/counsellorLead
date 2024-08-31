@@ -137,7 +137,7 @@ return (`${year}-${month}-${day}`)
     let todayDate = formatDate(new Date())
 
     try{
-      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorDemoCount',{
+      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorDemoCount',{
         method:'GET',
         headers:{
           "counselorNo":localStorage.getItem("counsellorNo"),
@@ -384,7 +384,7 @@ return (`${year}-${month}-${day}`)
 
    try {
 
-      let url = `https://counsellorlead-1.onrender.com/counselorDemo`
+      let url = `https://counsellorlead-2.onrender.com/counselorDemo`
       ContextValue.updateProgress(20);
 
       const res = await fetch(`${url}`, {
@@ -432,7 +432,7 @@ return (`${year}-${month}-${day}`)
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorDemoCount', {
+      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorDemoCount', {
         method: 'GET',
         headers: {
           'counselorNo': localStorage.getItem("counsellorNo"),

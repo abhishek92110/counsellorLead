@@ -27,7 +27,7 @@ const DataState = (props) => {
     const getAllCounselor = async () => {
       updateProgress(30);
         updateBarStatus(true);
-        let allCounselor = await fetch("https://counsellorlead-1.onrender.com/getAllCounselor", {
+        let allCounselor = await fetch("https://counsellorlead-2.onrender.com/getAllCounselor", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const DataState = (props) => {
 
       updateProgress(30);
       updateBarStatus(true);
-        let allCampaign = await fetch("https://counsellorlead-1.onrender.com/getfacebookCampaignData", {
+        let allCampaign = await fetch("https://counsellorlead-2.onrender.com/getfacebookCampaignData", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const DataState = (props) => {
 
         updateProgress(30);
         updateBarStatus(true);
-          let allTrainer = await fetch("https://counsellorlead-1.onrender.com/getTrainers", {
+          let allTrainer = await fetch("https://counsellorlead-2.onrender.com/getTrainers", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const DataState = (props) => {
         updateBarStatus(true);
       
         try {
-            let totalLatestData = await fetch('https://counsellorlead-1.onrender.com/getLatestFacebookAdData', {
+            let totalLatestData = await fetch('https://counsellorlead-2.onrender.com/getLatestFacebookAdData', {
                 method: 'GET',
             });
       

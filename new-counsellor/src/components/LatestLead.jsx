@@ -136,7 +136,7 @@ const AllLead = () => {
 
   //   try {
 
-  //     let url = `https://counsellorlead-1.onrender.com/counselorLead`
+  //     let url = `https://counsellorlead-2.onrender.com/counselorLead`
   //     ContextValue.updateProgress(60);
 
   //     const res = await fetch(`${url}`, {
@@ -182,7 +182,7 @@ const AllLead = () => {
   //     // console.log("counsellor no from getLead =",localStorage.getItem("counsellorNo"),rangeDate.startDate,rangeDate.endDate)
   
   //     try{
-  //       let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadCount',{
+  //       let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadCount',{
   //         method:'GET',
   //         headers:{
   //           "counselorNo":localStorage.getItem("counsellorNo"),
@@ -236,7 +236,7 @@ const AllLead = () => {
 
         ContextValue.updateProgress(60);
   
-        const res = await fetch('https://counsellorlead-1.onrender.com/counselorLead', {
+        const res = await fetch('https://counsellorlead-2.onrender.com/counselorLead', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ const AllLead = () => {
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadCount', {
+      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadCount', {
         method: 'GET',
         headers: {
           'counselorNo': localStorage.getItem('counsellorNo'),

@@ -59,7 +59,7 @@ const AllCampaign = () => {
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadFilter', {
+      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadFilter', {
         method: 'GET',
         headers: {
           'counselorNo': counsellor.counsellorNo,

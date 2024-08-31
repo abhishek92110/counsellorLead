@@ -362,7 +362,7 @@ const CounsellorAllLead = () => {
    console.log("temp latest data =",latestData)
     try {
 
-      let url = `https://counsellorlead-1.onrender.com/counselorLead`
+      let url = `https://counsellorlead-2.onrender.com/counselorLead`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -426,7 +426,7 @@ const addLeadStatus = async (e) => {
 
   try 
   {
-    let url = `https://counsellorlead-1.onrender.com/counselorLead`
+    let url = `https://counsellorlead-2.onrender.com/counselorLead`
     ContextValue.updateProgress(20);
 
     const res = await fetch(`${url}`, {
@@ -466,7 +466,7 @@ const addLeadStatus = async (e) => {
       console.log("demo data length =",demoData)
       try {
 
-        let url = `https://counsellorlead-1.onrender.com/counselorDemo`
+        let url = `https://counsellorlead-2.onrender.com/counselorDemo`
         ContextValue.updateProgress(60);
   
         const res = await fetch(`${url}`, {
@@ -505,7 +505,7 @@ const addLeadStatus = async (e) => {
           console.log("if from visit and followup length",visitData)
           try {
   
-            let url = `https://counsellorlead-1.onrender.com/counselorVisit`
+            let url = `https://counsellorlead-2.onrender.com/counselorVisit`
             ContextValue.updateProgress(60);
       
             const res = await fetch(`${url}`, {
@@ -546,7 +546,7 @@ const addLeadStatus = async (e) => {
               console.log("follow up data length", followUpData.length)
               try {
   
-                let url = `https://counsellorlead-1.onrender.com/counselorFollowUp`
+                let url = `https://counsellorlead-2.onrender.com/counselorFollowUp`
                 ContextValue.updateProgress(60);
           
                 const res = await fetch(`${url}`, {
@@ -613,7 +613,7 @@ const getLead = async()=>{
 
   try
   {
-    let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadFilter',{
+    let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadFilter',{
       method:'GET',
       headers:{
         "counselorNo":localStorage.getItem("counsellorNo"),

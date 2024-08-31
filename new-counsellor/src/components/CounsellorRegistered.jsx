@@ -163,7 +163,7 @@ const CounsellorRegistered = () => {
       ContextValue.updateProgress(20);
       ContextValue.updateBarStatus(true);
   
-      let totalLead = await fetch('https://counsellorlead-1.onrender.com/getCounsellorRingingConnectedRegistered', {
+      let totalLead = await fetch('https://counsellorlead-2.onrender.com/getCounsellorRingingConnectedRegistered', {
         method: 'GET',
         headers: {
           'counselorNo': localStorage.getItem("counsellorNo"),
@@ -302,7 +302,7 @@ const CounsellorRegistered = () => {
 
     try {
 
-      let url = `https://counsellorlead-1.onrender.com/counselorLead`
+      let url = `https://counsellorlead-2.onrender.com/counselorLead`
       ContextValue.updateProgress(60);
 
       const res = await fetch(`${url}`, {
@@ -378,7 +378,7 @@ const addLeadStatus = async (e) => {
 
   try 
   {
-    let url = `https://counsellorlead-1.onrender.com/counselorLead`
+    let url = `https://counsellorlead-2.onrender.com/counselorLead`
     ContextValue.updateProgress(60);
 
     const res = await fetch(`${url}`, {
@@ -398,7 +398,7 @@ const addLeadStatus = async (e) => {
 
       try {
 
-        let url = `https://counsellorlead-1.onrender.com/counselorDemo`
+        let url = `https://counsellorlead-2.onrender.com/counselorDemo`
         ContextValue.updateProgress(60);
   
         const res = await fetch(`${url}`, {
@@ -417,7 +417,7 @@ const addLeadStatus = async (e) => {
         if(data.status && (visitData.length>0 || followUpData>0)){
           try {
   
-            let url = `https://counsellorlead-1.onrender.com/counselorVisit`
+            let url = `https://counsellorlead-2.onrender.com/counselorVisit`
             ContextValue.updateProgress(60);
       
             const res = await fetch(`${url}`, {
@@ -438,7 +438,7 @@ const addLeadStatus = async (e) => {
             if(data.status && followUpData.length>0){
               try {
   
-                let url = `https://counsellorlead-1.onrender.com/counselorFollowUp`
+                let url = `https://counsellorlead-2.onrender.com/counselorFollowUp`
                 ContextValue.updateProgress(60);
           
                 const res = await fetch(`${url}`, {
@@ -607,7 +607,7 @@ const getLead = async()=>{
 
   try
   {
-    let totalLead = await fetch('https://counsellorlead-1.onrender.com/getcounselorLeadCount',{
+    let totalLead = await fetch('https://counsellorlead-2.onrender.com/getcounselorLeadCount',{
       method:'GET',
       headers:{
         "counselorNo":localStorage.getItem("counsellorNo"),
