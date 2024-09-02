@@ -1785,7 +1785,7 @@ router.get('/getCounsellorRingingConnectedRegistered',async(req,res)=>{
     let endDate  = req.header('endDate');
     let status  = req.header('status');
 
-    console.log(" counselor no ringing route= ",status,counselorNo, campaignId, typeof(campaignId), startDate, endDate)
+    console.log(" counselor no ringing route= ",from,status,counselorNo, campaignId, typeof(campaignId), startDate, endDate)
 
     try{
     let totalLead = await counselorLead.find({
@@ -1800,30 +1800,9 @@ router.get('/getCounsellorRingingConnectedRegistered',async(req,res)=>{
     console.log("campaign id and counsellor no =",campaignId!="",counselorNo,totalLead)
 
     let filterData = totalLead.filter(data=>{
-        // console.log("data.created_time>=startDate =",data.counsellorNo==counselorNo)
 
         return((campaignId==""?true:data.campaignId==campaignId ) && (counselorNo==""?true:data.counsellorNo==counselorNo) && (from==""?true:data.finalStatusFrom==from))
 
-        // if(campaignId!="" && counselorNo!="" && from!=""){
-        //     return(data.campaignId==campaignId && data.counsellorNo==counselorNo && data.finalStatusFrom==from)
-        // }
-        // else if(campaignId!=""){
-        //     return(data.campaignId==campaignId)
-        // }
-
-        // else if(counselorNo!=""){
-        //     console.log("else if of counselor",from,counselorNo)
-
-        //     return(data.counsellorNo==counselorNo)
-        // }
-        // else if(from!=""){
-        //     console.log("else if of from",from,counselorNo)
-        //     return(data.finalStatusFrom==from)
-        // }
-        // else{
-        //     console.log("else is running")
-        //     return true
-        // }
     })
 
     // console.log("total lead =",totalLead)
