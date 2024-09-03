@@ -708,7 +708,7 @@ const getLead = async()=>{
         else if(value=="Follow Up"){
           addFollowUp(element, index, value)
         }
-        else if(value=="Registered"){
+        else if(value=="Registered" || value=="Not Interested"){
           let tempLatestData = latestData;
           tempLatestData[index].status = value
           tempLatestData[index].finalStatus = value
@@ -783,7 +783,7 @@ const getLead = async()=>{
           addFollowUp(element, index, value)
         }
 
-        else if(value=="Registered"){
+        else if(value=="Registered" || value=="Not Interested"){
           let tempLatestData = latestData;
           tempLatestData[index].status = value
           tempLatestData[index].finalStatus = value
@@ -964,6 +964,7 @@ const getLead = async()=>{
                                 <option value="Ringing">Ringing</option>                     
                                 <option value="Connected">Connected</option>                     
                                 <option value="Registered">Registered</option>                                         
+                                <option value="Not Interested">Not Interested</option>                                         
                         
                     </select>
     </td>

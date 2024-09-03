@@ -1787,6 +1787,9 @@ router.get('/getCounsellorRingingConnectedRegistered',async(req,res)=>{
 
     console.log(" counselor no ringing route= ",from,status,counselorNo, campaignId, typeof(campaignId), startDate, endDate)
 
+    if(status=="Not Interested" || status=="Registered" || status=="Not Joined")
+    
+{
     try{
     let totalLead = await counselorLead.find({
         finalDate:{
@@ -1809,11 +1812,41 @@ router.get('/getCounsellorRingingConnectedRegistered',async(req,res)=>{
 
     res.send({"filterData":filterData,"leadLength":totalLead.length, "totalLead":filterData, "status":true})
     }
+    
     catch(error){
         console.log("error from total lead route=",error.message)
         res.send({"error":error.message, "status":false})
     }
+}
+else{
+    try{
+        let totalLead = await counselorLead.find({
+            scheduleDate:{
+                $gte:startDate,
+                $lte:endDate,
+            },
+            status:status
+        }
+        )
     
+        console.log("campaign id and counsellor no =",campaignId!="",counselorNo,totalLead)
+    
+        let filterData = totalLead.filter(data=>{
+    
+            return((campaignId==""?true:data.campaignId==campaignId ) && (counselorNo==""?true:data.counsellorNo==counselorNo) && (from==""?true:data.finalStatusFrom==from))
+    
+        })
+    
+        // console.log("total lead =",totalLead)
+    
+        res.send({"filterData":filterData,"leadLength":totalLead.length, "totalLead":filterData, "status":true})
+        }
+        
+        catch(error){
+            console.log("error from total lead route=",error.message)
+            res.send({"error":error.message, "status":false})
+        }
+}
 })
 
 

@@ -103,7 +103,14 @@ const CounsellorDemo = () => {
         endDate = new Date(); // Current date
         startDate = new Date();
         startDate.setDate(endDate.getDate() - 7); // Subtract 7 days to get a week ago
-    } else {
+    } 
+    
+    else if (timeValue === "Tomorrow") {
+      today.setDate(today.getDate() + 1); // Add 1 day to get tomorrow
+      startDate = today;
+      endDate = new Date(today);
+  }
+    else {
         // Handle the case when time is not recognized
         console.error("Invalid time option");
         return;
@@ -479,6 +486,7 @@ return (`${year}-${month}-${day}`)
                         <option disabled selected>--select Time--</option>
                     
                                 <option value="Today">Today</option>
+                                <option value="Tomorrow">Tomorrow</option>
                                 <option value="Yesterday">Yesterday</option>
                                 <option value="Last Week">Last Week</option>
                                 <option value="Select Range">Select Range</option>

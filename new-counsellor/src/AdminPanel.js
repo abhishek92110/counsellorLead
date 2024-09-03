@@ -13,6 +13,7 @@ import Connected from './components/Connected';
 import Registered from './components/Registered';
 import NotJoined from './components/NotJoined';
 import NotInterested from './components/NotInterested';
+import NoResponse from './components/NoResponse';
 
 const AdminPanel = () => {
   const [activeSection, setActiveSection] = useState('section-1');
@@ -48,10 +49,12 @@ const AdminPanel = () => {
                 case 'section-8':
                   return <Connected/>;
                 case 'section-9':
-                  return <Registered/>;
+                  return <NoResponse/>;
                 case 'section-10':
-                  return <NotJoined/>;
+                  return <Registered/>;
                 case 'section-11':
+                  return <NotJoined/>;
+                case 'section-12':
                   return <NotInterested/>;
       default:
         return <div>Default Table</div>;
@@ -104,9 +107,10 @@ const AdminPanel = () => {
           <button onClick={() => setActiveSection('section-6')} className={activeSection=="section-6"?"selected-btn":""}>Visit</button>
           <button onClick={() => setActiveSection('section-7')} className={activeSection=="section-7"?"selected-btn":""}>Ringing</button>
           <button onClick={() => setActiveSection('section-8')} className={activeSection=="section-8"?"selected-btn":""}>Connected</button>
-          <button onClick={() => setActiveSection('section-9')} className={activeSection=="section-9"?"selected-btn":""}>Registered</button>
-          <button onClick={() => setActiveSection('section-10')} className={activeSection=="section-10"?"selected-btn":""}>Not Joined</button>
-          <button onClick={() => setActiveSection('section-11')} className={activeSection=="section-11"?"selected-btn":""}>Not Interested</button>
+          <button onClick={() => setActiveSection('section-9')} className={activeSection=="section-9"?"selected-btn":""}>No Response</button>
+          <button onClick={() => setActiveSection('section-10')} className={activeSection=="section-10"?"selected-btn":""}>Registered</button>
+          <button onClick={() => setActiveSection('section-11')} className={activeSection=="section-11"?"selected-btn":""}>Not Joined</button>
+          <button onClick={() => setActiveSection('section-12')} className={activeSection=="section-12 mt-2"?"selected-btn":"mt-2"}>Not Interested</button>
         </div>
         <div className="table-section">
           {renderTable()}

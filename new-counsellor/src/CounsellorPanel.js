@@ -17,6 +17,7 @@ import CounsellorConnected from './components/CounsellorConnected';
 import CounsellorRegistered from './components/CounsellorRegistered';
 import CounsellorNotJoined from './components/CounsellorNotJoined';
 import CounsellorNotInterested from './components/CounsellorNotInterested';
+import CounsellorNoResponse from './components/CounsellorNoResponse';
 
 const CounsellorPanel = () => {
   const [activeSection, setActiveSection] = useState('section-1');
@@ -55,6 +56,8 @@ const CounsellorPanel = () => {
                 return <CounsellorNotJoined/>;
               case 'section-10':
                 return <CounsellorNotInterested/>;
+              case 'section-11':
+                return <CounsellorNoResponse/>;
       default:
         return <div>Default Table</div>;
     }
@@ -99,6 +102,7 @@ const CounsellorPanel = () => {
           <button onClick={() => setActiveSection('section-8')} className={activeSection=="section-8"?"selected-btn":""}>Registered</button>
           <button onClick={() => setActiveSection('section-9')} className={activeSection=="section-9"?"selected-btn":""}>Not Joined</button>
           <button onClick={() => setActiveSection('section-10')} className={activeSection=="section-10"?"selected-btn":""}>Not Interested</button>
+          <button onClick={() => setActiveSection('section-11')} className={activeSection=="section-11"?"selected-btn":""}>No Response</button>
         </div>
         <div className="table-section">
           {renderTable()}
